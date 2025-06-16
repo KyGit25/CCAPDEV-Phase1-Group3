@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile - DLSU Lab Reservation Portal</title>
+  <!-- CSS SECTION -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation consistent with other pages -->
+    <nav>
+        <a href="../../index.html">Home</a>
+        <a href="../dashboard/student.html">Dashboard</a>
+        <a href="view.html" class="active">Profile</a>
+        <a href="../../views/auth/login.html">Logout</a>
+    </nav>
 
+    <main class="profile-view">
+        <section class="profile-header">
+            <div class="profile-picture">
+                <!-- Placeholder for profile picture -->
+                <img src="../../assets/profile-pics/sample.jpg" alt="Profile Picture" id="profile-pic">
+            </div>
+            <div class="profile-info">
+                <h1 id="user-name">Sample User</h1>
+                <p class="email" id="user-email">sample.user@dlsu.edu.ph</p>
+                <p class="user-type" id="user-type">Student</p>
+                <!-- Edit button that only shows when viewing own profile -->
+                <a href="edit.html" class="btn-edit">Edit Profile</a>
+            </div>
+        </section>
+
+        <section class="current-reservations">
+            <h2>Current Reservations</h2>
+            <div class="reservations-container" id="reservations-list">
+                <!-- PLACEHOLDER ONLY - Sample reservation - sample data to be displayed here -->
+                <div class="reservation-card">
+                    <h3>Gokongwei Building - Lab 1</h3>
+                    <p><strong>Seat:</strong> A12</p>
+                    <p><strong>Date:</strong> June 20, 2025</p>
+                    <p><strong>Time:</strong> 2:00 PM - 4:30 PM</p>
+                </div>
+                <!-- Additional sample reservations can be added here according to data -->
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
