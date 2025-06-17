@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-/* General Styling */
 body {
-  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
   background-image: url('../assets/background.gif');
   background-size: cover;
   background-repeat: no-repeat;
@@ -10,151 +10,238 @@ body {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  margin: 0;
-  padding: 0;
-  color: #7ed957;
-  position: relative;
+  font-family: 'Poppins', sans-serif;
 }
 
+/* Optional: dark overlay to improve text readability */
 body::before {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   background: rgba(0, 0, 0, 0.4);
   z-index: 0;
-  pointer-events: none;
+  pointer-events: none; /* <-- This makes it not block clicks */
 }
 
-/* Containers */
-.container,
-.center-wrapper {
-  z-index: 1;
-  position: relative;
+nav{
+    background-color: black;
+    padding: 10px 15px;
 }
 
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 20px;
+.brand-container{
+    display: inline-block;
 }
 
-.center-wrapper {
-  min-height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.brand-title{
+    display: inline-block;
+    margin: 0;
+    color: #7ed957;
+    font-family: 'Poppins';
+    font-size: 15px;
+    position: relative;
+    top: -10px;
+    left: 15px;
 }
 
-/* Navigation */
-nav, .navbar-dark {
-  background-color: black;
-  padding: 10px 15px;
+.link-container{
+    float: right;
+    position: relative;
+    top: 10px;
 }
 
-.navbar-brand, .brand-title {
-  font-weight: bold;
-  color: #7ed957 !important;
+.link{
+    display: inline-block;
+    color: #7ed957;
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-size: 15px;
+    margin: 0 15px;
+    transition: 0.2s;
+}
+
+.link:hover{
+    color: white;
+}
+
+.btn-link{
+    margin-right: 15px;
+    background-color: #7ed957;
+    padding: 10px 20px;
+    font-family: 'Poppins';
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.2s;
+}
+
+.btn-link:hover{
+    padding: 10px 30px;
+}
+
+.nav-ellipsis-menu {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dots {
   font-size: 15px;
-  margin-left: 15px;
+  color: white;
+  padding: 0px;
+  margin-right: 10px;
+
 }
 
-.navbar-nav .nav-link, .link {
-  color: #7ed957 !important;
-  font-size: 15px;
-  margin: 0 15px;
+.dots:hover{
+    background-color: #7ed957;
+    padding: 0px 20px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #d9d9d9;
+  min-width: 100px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  z-index: 2;
+}
+
+.dropdown-menu a {
+  color: black;
+  padding: 10px 12px;
   text-decoration: none;
-  transition: 0.2s;
-}
-
-.link:hover, .navbar-nav .nav-link:hover {
-  color: white !important;
-}
-
-.navbar-toggler {
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Cards/Forms */
-.main-container, .reg-container {
-  width: 300px;
-  background-color: black;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  border-radius: 25px;
-  padding: 30px;
+  display: block;
   text-align: center;
-  align-items: center;
-  color: #7ed957;
 }
 
-.main-container {
-  height: 350px;
+.dropdown-menu a:hover {
+  background-color: #f1f1f1;
+  border-radius: 8px;
 }
 
-.reg-container {
-  height: 450px;
+.nav-ellipsis-menu:hover .dropdown-menu {
+  display: inline-block;
 }
 
-/* Titles */
-.title {
-  font-size: 45px;
-  font-weight: bold;
-  margin: 0;
+.center-wrapper{
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.caption {
-  margin: 0;
-  padding: 5px;
+.main-container{
+    margin: 10px;
+    width: 80%;
+    height: 600px;
+    background-color:#d9d9d9;
+    color: black;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 25px;
+    padding: 20px;
+    z-index: 1;
 }
 
-/* Inputs */
-.input-item input,
-.form-control {
-  font-size: 16px;
+.btn-search{
+    margin-right: 5px;
+    background-color: #d9d9d9;
+    border: 1px;
+    padding: 10px 60px;
+    font-family: 'Poppins';
+    font-size: 15px;
+    color: black;
+    text-decoration: none;
+    border-radius: 25px;
+    text-align: left;
+}
+
+.mb-3{
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 0;
+    font-size: 30px;
+}
+
+.mb-4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.btn.btn-primary{
+    align-items: center;
+    background-color: #7ed957;
+    color: black;
+    padding: 20px 70px;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 8px;
+    margin-right: 50px;
+}
+
+.btn.btn-secondary{
+    background-color: #7ed957;
+    color: black;
+    padding: 20px 70px;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 8px;
+}
+
+.btn:hover{
+    background-color: black;
+    color: #7ed957;
+}
+
+table {
   width: 100%;
-  height: 50px;
-  padding: 0 15px;
-  border-radius: 8px;
-  border: 1px solid #7ed957;
-  box-sizing: border-box;
-  margin: 10px 0;
-  font-family: 'Poppins';
-}
-
-/* Buttons */
-.submit, .btn-link {
-  background-color: #7ed957;
-  padding: 10px 15px;
-  font-size: 15px;
-  font-family: 'Poppins';
-  color: white;
-  text-decoration: none;
-  border-radius: 25px;
-  border: none;
-  transition: 0.2s;
-  cursor: pointer;
-}
-
-.submit:hover, .btn-link:hover {
+  border-collapse: collapse;
+  margin-top: 20px;
   background-color: white;
-  color: #7ed957;
-  padding: 10px 20px;
-}
-
-.reglog-btn {
-  color: white;
-}
-
-.reglog-btn:hover {
-  color: #7ed957;
-}
-
-/* Misc */
-.text-center {
-  text-align: center;
-}
-
-img.img-fluid {
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+.table thead th {
+  background-color: #f2f2f2;
+  color: #333;
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 2px solid #ddd;
+}
+
+.table tbody td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.main-edit-profile{
+    margin: 10px;
+    width: 80%;
+    height: 600px;
+    background-color:#d9d9d9;
+    color: black;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 25px;
+    padding: 20px;
+    z-index: 1;
 }
