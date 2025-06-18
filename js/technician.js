@@ -1,10 +1,7 @@
-// technician.js
-
 document.addEventListener("DOMContentLoaded", function () {
   const technicianTable = document.getElementById("technicianTable");
   const logoutBtn = document.getElementById("logoutBtn");
 
-  // Sample reservations
   const reservations = [
     {
       student: "John Cruz",
@@ -53,9 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.removeNoShow = function (index) {
     alert(`Reservation #${index + 1} marked as no-show and removed (simulated).`);
-    // You could remove the item here too if desired:
-    // reservations.splice(index, 1);
-    // renderReservations();
   };
 
   window.editAsTech = function (index) {
