@@ -1,5 +1,3 @@
-// register.js
-
 document.addEventListener("DOMContentLoaded", function () {
   const registerForm = document.getElementById("registerForm");
 
@@ -25,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    // Simulate saving user
     const newUser = {
       email: email,
       password: password,
