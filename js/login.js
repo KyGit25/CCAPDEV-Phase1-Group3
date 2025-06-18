@@ -1,11 +1,11 @@
-// login.js
-
 document.addEventListener("DOMContentLoaded", function () {
   const loginForm = document.getElementById("loginForm");
 
-  // Sample users (should match those used in register simulation)
   const sampleUsers = [
     { email: "john.cruz@dlsu.edu.ph", password: "john123", userType: "student" },
+    { email: "daniel.reyes@dlsu.edu.ph", password: "daniel123", userType: "student" },
+    { email: "anna.delacruz@dlsu.edu.ph", password: "anna123", userType: "student" },
+    { email: "lucas.tan@dlsu.edu.ph", password: "lucas123", userType: "technician" },
     { email: "maria.santos@dlsu.edu.ph", password: "maria123", userType: "technician" }
   ];
 
@@ -29,14 +29,13 @@ document.addEventListener("DOMContentLoaded", function () {
     if (rememberMe) {
       const rememberData = {
         ...foundUser,
-        rememberUntil: new Date(Date.now() + 1000 * 60 * 60 * 24 * 21) // 3 weeks
+        rememberUntil: new Date(Date.now() + 1000 * 60 * 60 * 24 * 21) 
       };
       localStorage.setItem("rememberedUser", JSON.stringify(rememberData));
     }
 
     alert("Login successful!");
 
-    // Redirect based on user type
     if (foundUser.userType === "student") {
       window.location.href = "dashboard.html";
     } else {
