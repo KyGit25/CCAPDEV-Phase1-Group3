@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const userType = document.getElementById("userType").value;
 
     const foundUser = sampleUsers.find(
-      user => user.email === email && user.password === password
+      user => user.email === email && user.password === password && user.userType === userType
     );
 
     if (!foundUser) {
