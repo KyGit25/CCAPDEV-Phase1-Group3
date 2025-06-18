@@ -1,10 +1,7 @@
-// dashboard.js
-
 document.addEventListener("DOMContentLoaded", function () {
   const reservationList = document.getElementById("reservationList");
   const logoutBtn = document.getElementById("logoutBtn");
 
-  // Sample reservations (normally fetched from DB)
   const sampleReservations = [
     {
       lab: "Lab A",
