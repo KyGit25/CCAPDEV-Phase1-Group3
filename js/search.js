@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const slotResults = document.getElementById("slotResults");
   const userResults = document.getElementById("userResults");
 
-  // Hardcoded available slots (for simplicity)
   const availableSlots = [
     { lab: "Lab A", date: "2025-06-18", time: "08:00", seat: "S05" },
     { lab: "Lab B", date: "2025-06-19", time: "10:30", seat: "S12" },
