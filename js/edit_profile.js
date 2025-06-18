@@ -1,5 +1,3 @@
-// edit_profile.js
-
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("editProfileForm");
 
@@ -31,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Profile Updated:", updatedProfile);
     alert("Profile updated successfully! (Simulated)");
 
-    // Simulate redirect back to profile page
     window.location.href = "profile.html";
   });
 });
