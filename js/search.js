@@ -1,5 +1,3 @@
-// search.js
-
 document.addEventListener("DOMContentLoaded", function () {
   const slotForm = document.getElementById("slotSearchForm");
   const userForm = document.getElementById("userSearchForm");
@@ -13,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
     { lab: "Lab C", date: "2025-06-20", time: "09:00", seat: "S27" }
   ];
 
-  // Hardcoded users
   const users = [
     { name: "John Cruz", id: "john" },
     { name: "Maria Santos", id: "maria" },
