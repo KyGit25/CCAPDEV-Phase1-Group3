@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const email = document.getElementById("loginEmail").value.trim();
     const password = document.getElementById("loginPassword").value.trim();
     const rememberMe = document.getElementById("rememberMe").checked;
+    const userType = document.getElementById("userType").value;
 
     const foundUser = sampleUsers.find(
       user => user.email === email && user.password === password
@@ -34,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     alert("Login successful!");
-    
+
     // Redirect based on user type
     if (foundUser.userType === "student") {
       window.location.href = "dashboard.html";
