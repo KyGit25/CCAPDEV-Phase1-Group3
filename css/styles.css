@@ -242,7 +242,7 @@ table {
   border-bottom: none;
 }
 
-.main-edit-profile{
+.main-edit-profile, .main-profile{
     margin: 10px;
     width: 80%;
     height: 600px;

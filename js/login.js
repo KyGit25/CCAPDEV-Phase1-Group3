@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     alert("Login successful!");
-
+    
     // Redirect based on user type
     if (foundUser.userType === "student") {
       window.location.href = "dashboard.html";
