@@ -1,18 +1,14 @@
-// profile.js
-
 document.addEventListener("DOMContentLoaded", function () {
   const nameEl = document.getElementById("userName");
   const descEl = document.getElementById("userDescription");
   const resTable = document.getElementById("profileReservations");
 
-  // Sample user data
   const user = {
     name: "John Cruz",
     email: "john.cruz@dlsu.edu.ph",
     description: "Computer Science student interested in systems development."
   };
 
-  // Sample reservations
   const reservations = [
     {
       lab: "Lab A",
@@ -28,11 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   ];
 
-  // Set profile info
   nameEl.textContent = user.name;
   descEl.textContent = user.description;
 
-  // Render reservations
   reservations.forEach(res => {
     const row = document.createElement("tr");
 
