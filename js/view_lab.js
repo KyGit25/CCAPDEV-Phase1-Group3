@@ -1,5 +1,3 @@
-// view_lab.js
-
 document.addEventListener("DOMContentLoaded", function () {
   const labSelect = document.getElementById("labSelect");
   const container = document.getElementById("availabilityContainer");
@@ -11,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
     "Lab C": []
   };
 
-  // Generate sample data
   const sampleNames = [
     { name: "John Cruz", id: "john" },
     { name: "Maria Santos", id: "maria" },
@@ -77,6 +74,5 @@ document.addEventListener("DOMContentLoaded", function () {
     renderSeats(this.value);
   });
 
-  // Initial render
   renderSeats(labSelect.value);
 });
