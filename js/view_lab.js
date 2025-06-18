@@ -12,7 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const sampleNames = [
     { name: "John Cruz", id: "john" },
     { name: "Maria Santos", id: "maria" },
-    { name: "Daniel Reyes", id: "daniel" }
+    { name: "Daniel Reyes", id: "daniel" },
+    { name: "Anna Dela Cruz", id: "anna" },
+    { name: "Lucas Tan", id: "lucas" }
   ];
 
   function generateSeats(labName) {
