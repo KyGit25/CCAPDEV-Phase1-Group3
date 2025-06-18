@@ -4,11 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Reserve a Slot</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <script>src="../js/reserve.js"</script>
 </head>
 <body>
-  <div class="container mt-5">
+  <nav>
+    <div class="brand-container">
+      <a href="dashboard.html" class="home-button">
+        <img src="../assets/logo.png" width="35px"/>
+      </a>
+      <h5 class="brand-title">DLSU Lab Reservation Portal</h5>
+    </div>
+
+    <div class="link-container">
+      <a href="dashboard.html" class="exit-btn">
+        <img src="../assets/exit.png" width="35px"/>
+      </a>
+    </div>
+  </nav>
+
+  <div class="center-wrapper">
+    <div class="main-container">
     <h2 class="text-center mb-4">Reserve Lab Slots</h2>
 
     <form id="reservationForm" class="mb-4">
@@ -21,16 +37,19 @@
           <option value="Lab C">Lab C</option>
         </select>
       </div>
+      
 
       <div class="mb-3">
         <label for="seatNumber" class="form-label">Seat Number (S01–S35)</label>
         <input type="text" class="form-control" id="seatNumber" required placeholder="e.g., S12"/>
       </div>
+      <br>
 
       <div class="mb-3">
         <label for="date" class="form-label">Date</label>
         <input type="date" class="form-control" id="date" required />
       </div>
+      <br>
 
       <div class="mb-3">
         <label for="timeSlots" class="form-label">Select Time Slots (30-minute intervals)</label>
@@ -48,14 +67,17 @@
         </div>
         <!-- Add more slots as needed -->
       </div>
+      <br>
 
       <div class="form-check mb-3">
         <input class="form-check-input" type="checkbox" id="anonymous" />
         <label class="form-check-label" for="anonymous">Reserve Anonymously</label>
       </div>
+      <br>
 
       <button type="submit" class="btn btn-primary w-100">Submit Reservation</button>
     </form>
+  </div>
   </div>
 
   <script src="js/reserve.js"></script>
