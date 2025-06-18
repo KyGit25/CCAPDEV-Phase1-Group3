@@ -3,11 +3,38 @@ document.addEventListener("DOMContentLoaded", function () {
   const descEl = document.getElementById("userDescription");
   const resTable = document.getElementById("profileReservations");
 
-  const user = {
+  const user = [
+  {
     name: "John Cruz",
     email: "john.cruz@dlsu.edu.ph",
     description: "Computer Science student interested in systems development."
-  };
+  },
+
+  {
+    name: "Maria Santos",
+    email: "maria.santos@dlsu.edu.ph",
+    description: "Computer Science student interested in systems development."
+  },
+
+  {
+    name: "Daniel Reyes",
+    email: "daniel.reyes@dlsu.edu.ph",
+    description: "Computer Science student interested in systems development."
+  },
+
+    {
+    name: "Anna Dela Cruz",
+    email: "anna.delacruz@dlsu.edu.ph",
+    description: "Computer Science student interested in systems development."
+  },
+
+  {
+    name: "Lucas Tan",
+    email: "lucas.tan@dlsu.edu.ph",
+    description: "Computer Science student interested in systems development."
+  }
+  
+];
 
   const reservations = [
     {
