@@ -33,6 +33,29 @@ exports.createReservation = async (req, res) => {
   }
 };
 
+exports.getEditReservation = async (req, res) => {
+  try {
+    const reservation = await Reservation.findById(req.params.id)
+      .populate('lab')
+      .lean();
+
+    if (!reservation) return res.status(404).send('Reservation not found');
+
+    // Format dates for HTML inputs
+    reservation.startTimeISO = reservation.startTime.toISOString().slice(0, 16);
+    reservation.endTimeISO = reservation.endTime.toISOString().slice(0, 16);
+
+    res.render('reservation/edit', {
+      reservation,
+      labs: await Lab.find(),
+      user: { _id: req.session.userId, userType: req.session.role }
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Server Error');
+  }
+};
+
 /**
  * Edit reservation (student or technician)
  */
