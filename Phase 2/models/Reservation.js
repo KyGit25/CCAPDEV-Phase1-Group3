@@ -1,11 +1,39 @@
 const mongoose = require('mongoose');
 
 const reservationSchema = new mongoose.Schema({
-  user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
-  lab: { type: mongoose.Schema.Types.ObjectId, ref: 'Lab', required: true },
-  date: { type: Date, required: true },
-  timeSlot: { type: String, required: true },
-  createdAt: { type: Date, default: Date.now }
-});
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
+  },
+  lab: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Lab',
+    required: true
+  },
+  seatNumber: {
+    type: Number,
+    required: true
+  },
+  startTime: {
+    type: Date,
+    required: true
+  },
+  endTime: {
+    type: Date,
+    required: true
+  },
+  isAnonymous: {
+    type: Boolean,
+    default: false
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
+}, { timestamps: true });
+
+// Prevent duplicate reservations
+reservationSchema.index({ lab: 1, seatNumber: 1, startTime: 1, endTime: 1 }, { unique: true });
 
 module.exports = mongoose.model('Reservation', reservationSchema);
