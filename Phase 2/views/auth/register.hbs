@@ -1,0 +1,28 @@
+{{#extend "title"}}Register{{/extend}}
+{{#extend "scripts"}}register{{/extend}}
+
+<div class="reg-container">
+  <div class="login-container">
+    <h2>Register</h2>
+    <form id="register-form" action="/auth/register" method="POST">
+      <div class="input-item">
+        <input type="email" placeholder="DLSU Email" name="email" class="form-control" required>
+      </div>
+      <div class="input-item">
+        <input type="password" placeholder="Password" name="password" class="form-control" required>
+      </div>
+      <div class="input-item">
+        <input type="password" placeholder="Confirm Password" name="confirmPassword" class="form-control" required>
+      </div>
+      <div class="selection-box">
+        <select name="userType" class="form-control" required>
+          <option value="" disabled selected>Select Registration Type</option>
+          <option value="student">Student</option>
+          <option value="technician">Lab Technician</option>
+        </select>
+      </div>
+      <button type="submit" class="submit">Register</button>
+    </form>
+    <p><i>Already have an account? </i><a href="/auth/login" class="reglog-btn">Login here</a></p>
+  </div>
+</div>

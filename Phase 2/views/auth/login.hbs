@@ -1,0 +1,26 @@
+{{#extend "title"}}Login{{/extend}}
+{{#extend "scripts"}}login{{/extend}}
+
+<div class="login-container">
+  <h2>Login</h2>
+  <form id="loginForm" action="/auth/login" method="POST">
+    <div class="input-item">
+      <input type="email" placeholder="DLSU Email" name="email" class="form-control" required>
+    </div>
+    <div class="input-item">
+      <input type="password" placeholder="Password" name="password" class="form-control" required>
+    </div>
+    <div class="selection-box">
+      <select name="userType" class="form-control" required>
+        <option value="" disabled selected>Select Login Type</option>
+        <option value="student">Student</option>
+        <option value="technician">Lab Technician</option>
+      </select>
+    </div>
+    <div class="checkbox-item">
+      <input type="checkbox" class="checkbox-input" name="rememberMe"> Remember me
+    </div>
+    <button type="submit" class="submit">Login</button>
+  </form>
+  <p><i>No account? </i><a href="/auth/register" class="reglog-btn">Register here</a></p>
+</div>
