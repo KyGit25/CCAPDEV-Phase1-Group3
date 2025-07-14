@@ -1,0 +1,51 @@
+{{#extend "title"}}{{user.name}}'s Profile{{/extend}}
+{{#extend "scripts"}}profile{{/extend}}
+
+<div class="main-profile">
+  <h2 class="mb-4 text-center">{{#if (eq user._id currentUser._id)}}My{{else}}{{user.name}}'s{{/if}} Profile</h2>
+
+  <div class="card mb-4" style="max-width: 600px; margin: 0 auto;">
+    <div class="row g-0">
+      <div class="col-md-4 d-flex align-items-center justify-content-center p-3">
+        <img src="{{user.profilePic}}" alt="Profile" class="img-fluid rounded-circle" style="max-width: 100px;">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{user.name}}</h5>
+          <p class="card-text"><strong>Email:</strong> {{user.email}}</p>
+          <p class="card-text"><strong>Role:</strong> {{capitalize user.type}}</p>
+          <p class="card-text">{{user.bio}}</p>
+          {{#if (eq user._id currentUser._id)}}
+            <a href="/profile/{{user._id}}/edit" class="btn btn-sm btn-outline-primary">Edit Profile</a>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h4 class="text-center">Current Reservations</h4>
+  <table class="table table-bordered mt-3">
+    <thead class="table-light">
+      <tr>
+        <th>Lab</th>
+        <th>Seat</th>
+        <th>Date</th>
+        <th>Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each user.reservations}}
+        <tr>
+          <td>{{this.lab.name}}</td>
+          <td>{{this.seatNumber}}</td>
+          <td>{{formatDate this.date}}</td>
+          <td>{{this.startTime}} - {{this.endTime}}</td>
+        </tr>
+      {{else}}
+        <tr>
+          <td colspan="4" class="text-center">No current reservations</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
