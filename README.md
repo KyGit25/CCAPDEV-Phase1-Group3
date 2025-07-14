@@ -2,13 +2,12 @@
 
 A comprehensive web application for managing computer laboratory seat reservations at De La Salle University.
 
-## Installation & Setup
 
-### Prerequisites
+## Prerequisites
 - Node.js (v14 or higher)
 - MongoDB (local installation or MongoDB Atlas)
 
-### Steps to Run Locally
+## Steps to Run Locally
 
 1. Open the command prompt and navigate to the CCAPDEV_Phase2_Group3 directory
 2. Run npm install and mongod if needed
