@@ -6,3 +6,6 @@ app.use('/reservation', reservationRoutes);
 
 const userRoutes = require('./routes/user');
 app.use('/profile', userRoutes);
+
+const searchRoutes = require('./routes/search');
+app.use('/search', searchRoutes);
