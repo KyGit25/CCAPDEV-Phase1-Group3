@@ -1,6 +1,9 @@
 const authRoutes = require('./routes/auth');
 app.use('/auth', authRoutes);
 
+const labRoutes = require('./routes/lab');
+app.use('/lab', labRoutes);
+
 const reservationRoutes = require('./routes/reservation');
 app.use('/reservation', reservationRoutes);
 
