@@ -33,7 +33,6 @@ const reservationSchema = new mongoose.Schema({
   }
 }, { timestamps: true });
 
-// Prevent duplicate reservations
 reservationSchema.index({ lab: 1, seatNumber: 1, startTime: 1, endTime: 1 }, { unique: true });
 
 module.exports = mongoose.model('Reservation', reservationSchema);
